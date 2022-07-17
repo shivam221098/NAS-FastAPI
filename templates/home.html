@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NAS</title>
+    <link rel="stylesheet" href="https://unpkg.com/sakura.css/css/sakura.css">
+</head>
+<body>
+<h1>{{ username }}</h1>
+<hr>
+<h3>Upload Files</h3>
+<form action="/submitform" method="post" enctype="multipart/form-data">
+    <br>
+    <input type="file" name="uploaded_files" multiple>
+    <input type="submit">
+</form>
+<hr>
+<form action="/openpage" method="post" enctype="multipart/form-data">
+    <label>Open file on {{ laptop_name }}</label>
+    <label>
+        <input type="text" name="link">
+    </label>
+    <button type="submit">Open</button>
+</form>
+<hr>
+<a href="/downloads">Download Files</a>
+</body>
+</html>
